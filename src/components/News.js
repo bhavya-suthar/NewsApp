@@ -24,6 +24,7 @@ export class News extends Component {
       page: 1,
     };
   }
+  
 
   async componentDidMount() {
     // console.log("cdm")
