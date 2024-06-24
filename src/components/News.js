@@ -185,6 +185,7 @@ export class News extends Component {
   }
 
   fetchNews = async () => {
+    this.props.setProgress(10);
     const { country, category, pageSize } = this.props;
     const { page } = this.state;
     const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=148910c2c1324f058a1ee124c7862ae3&page=${page}&pageSize=${pageSize}`;
@@ -192,12 +193,17 @@ export class News extends Component {
     try {
       this.setState({ loading: true });
       const response = await fetch(url);
+      this.props.setProgress(30);
+
       const data = await response.json();
+      this.props.setProgress(70);
+
       this.setState({
         articles: data.articles,
         loading: false,
         totalResults: data.totalResults,
       });
+      this.props.setProgress(100);
     } catch (error) {
       console.error("Error fetching data:", error);
       this.setState({ loading: false });
