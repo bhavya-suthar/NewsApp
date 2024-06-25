@@ -8,7 +8,7 @@ export class NewsItem extends Component {
       <div className="my-3">
         <div className="card" style={{ width: "18rem" }}>
         <div style={{display:'flex', justifyContent: 'flex-end', position: 'absolute', right:'0'}}>
-          <span className=" badge bg-danger">{source}</span>
+          <span className="badge bg-danger">{source}</span>
         </div>
           
 

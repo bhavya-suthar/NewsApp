@@ -188,7 +188,7 @@ export class News extends Component {
     this.props.setProgress(10);
     const { country, category, pageSize } = this.props;
     const { page } = this.state;
-    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=148910c2c1324f058a1ee124c7862ae3&page=${page}&pageSize=${pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${this.props.apikey}&page=${page}&pageSize=${pageSize}`;
     
     try {
       this.setState({ loading: true });
@@ -228,7 +228,7 @@ export class News extends Component {
     this.setState({page : this.state.page + 1})
     const { country, category, pageSize } = this.props;
     const { page } = this.state;
-    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=148910c2c1324f058a1ee124c7862ae3&page=${page}&pageSize=${pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${this.props.apikey}&page=${page}&pageSize=${pageSize}`;
     
     try {
       const response = await fetch(url);
