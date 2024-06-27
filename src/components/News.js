@@ -250,7 +250,7 @@ export class News extends Component {
 
     return (
       <div className="container my-3">
-        <h1 className="text-center" style={{ margin: '35px 0px' }}>NewsMonkey - Top {this.capitalizeFirstLetter(this.props.category)} Headlines</h1>
+        <h1 className="text-center" style={{ margin: '35px 0px',marginTop:'70px' }}>NewsMonkey - Top {this.capitalizeFirstLetter(this.props.category)} Headlines</h1>
         {loading && <Spinner />}
 
         <InfiniteScroll
@@ -302,4 +302,3 @@ export class News extends Component {
 }
 
 export default News;
-
