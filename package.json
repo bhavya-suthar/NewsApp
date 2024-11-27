@@ -1,6 +1,8 @@
 {
   "name": "newsapp",
   "version": "0.1.0",
+  "homepage": "https://bhavya-suthar.github.io/NewsApp",
+
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
